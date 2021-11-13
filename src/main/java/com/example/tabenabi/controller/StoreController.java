@@ -15,4 +15,9 @@ public class StoreController {
     public String locations() {
         return "Locations";
     }
+
+    @GetMapping("/details")
+    public String details() {
+        return "details";
+    }
 }
