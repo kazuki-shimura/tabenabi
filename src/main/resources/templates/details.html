@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Details</title>
@@ -7,5 +7,95 @@
 <body>
   <h2>DetailsPage</h2>
   <p>店舗詳細ページへようこそ</p>
+  <th:block th:each="shop : ${shopsInfo.results.shops}">
+    <p th:text="${shop.access}"></p>
+    <p th:text="${shop.address}"></p>
+    <p th:text="${shop.band}"></p>
+    <p th:text="${shop.barrier_free}"></p>
+
+    <p th:text="${shop.budget.average}"></p>
+    <p th:text="${shop.budget.code}"></p>
+    <p th:text="${shop.budget.name}"></p>
+
+    <p th:text="${shop.budget_memo}"></p>
+    <p th:text="${shop.capacity}"></p>
+    <p th:text="${shop.card}"></p>
+    <p th:text="${shop.catch_sample}"></p>
+    <p th:text="${shop.charter}"></p>
+    <p th:text="${shop.child}"></p>
+    <p th:text="${shop.close}"></p>
+
+    <p th:text="${shop.coupon_urls.pc}"></p>
+    <p th:text="${shop.coupon_urls.sp}"></p>
+
+    <p th:text="${shop.course}"></p>
+    <p th:text="${shop.english}"></p>
+    <p th:text="${shop.free_drink}"></p>
+    <p th:text="${shop.free_food}"></p>
+
+    <p th:text="${shop.genre.catch_sample}"></p>
+    <p th:text="${shop.genre.code}"></p>
+    <p th:text="${shop.genre.name}"></p>
+
+    <p th:text="${shop.horigotatsu}"></p>
+    <p th:text="${shop.id}"></p>
+    <p th:text="${shop.karaoke}"></p>
+    <p th:text="${shop.ktai_coupon}"></p>
+
+    <p th:text="${shop.large_area.code}"></p>
+    <p th:text="${shop.large_area.name}"></p>
+
+    <p th:text="${shop.large_service_area.code}"></p>
+    <p th:text="${shop.large_service_area.name}"></p>
+
+    <p th:text="${shop.lat}"></p>
+    <p th:text="${shop.lng}"></p>
+    <p th:text="${shop.logo_image}"></p>
+    <p th:text="${shop.lunch}"></p>
+
+    <p th:text="${shop.middle_area.code}"></p>
+    <p th:text="${shop.middle_area.name}"></p>
+
+    <p th:text="${shop.midnight}"></p>
+    <p th:text="${shop.mobile_access}"></p>
+    <p th:text="${shop.name}"></p>
+    <p th:text="${shop.name_kana}"></p>
+    <p th:text="${shop.non_smoking}"></p>
+    <p th:text="${shop.open}"></p>
+    <p th:text="${shop.other_memo}"></p>
+    <p th:text="${shop.parking}"></p>
+    <p th:text="${shop.party_capacity}"></p>
+    <p th:text="${shop.pet}"></p>
+
+    <p th:text="${shop.photo.mobile.l}"></p>
+    <p th:text="${shop.photo.mobile.s}"></p>
+    <p th:text="${shop.photo.pc.l}"></p>
+    <p th:text="${shop.photo.pc.m}"></p>
+    <p th:text="${shop.photo.pc.s}"></p>
+
+    <p th:text="${shop.private_room}"></p>
+
+    <p th:text="${shop.service_area.code}"></p>
+    <p th:text="${shop.service_area.name}"></p>
+
+    <p th:text="${shop.shop_detail_memo}"></p>
+    <p th:text="${shop.show}"></p>
+
+    <p th:text="${shop.small_area.code}"></p>
+    <p th:text="${shop.small_area.name}"></p>
+
+    <p th:text="${shop.station_name}"></p>
+
+    <p th:text="${shop.sub_genre.code}"></p>
+    <p th:text="${shop.sub_genre.name}"></p>
+
+    <p th:text="${shop.tatami}"></p>
+    <p th:text="${shop.tv}"></p>
+
+    <p th:text="${shop.urls.pc}"></p>
+
+    <p th:text="${shop.wedding}"></p>
+    <p th:text="${shop.wifi}"></p>
+  </th:block>
 </body>
 </html>
