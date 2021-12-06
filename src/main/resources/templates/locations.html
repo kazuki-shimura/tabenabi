@@ -10,8 +10,13 @@
     <h2>LocationsPage</h2>
 </body>
     <th:block th:each="shop : ${shopsInfo.results.shops}">
-        アクセス:<p th:text="${shop.access}"></p>
-        <p th:text="${shop.address}">アドレス</p>
+        <form action="details" method="get">
+            <input type="text" name="shopId" th:value="*{shop.id}" />
+            <input type="submit" />
+        </form>
+
+        <p th:text="${shop.access}" name="access"></p>
+        <p th:text="${shop.address}"></p>
         <p th:text="${shop.band}"></p>
         <p th:text="${shop.barrier_free}"></p>
 
